@@ -1,7 +1,6 @@
 # Dolphin
 
-## This code is the proof of concept implementation of the paper accepted at PETS 2023 Issue 1 that is titled: 
-## "Dolphin: A Cellular Voice Based Internet Shutdown Resistance System"
+## This code is the proof of concept implementation of the paper accepted at PETS 2023 Issue 1 that is titled: "Dolphin: A Cellular Voice Based Internet Shutdown Resistance System"
 
 _________________________________________________________________________________________________________________________________________________________________________
 
