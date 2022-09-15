@@ -1,4 +1,8 @@
 # Dolphin
+
+## This code is the proof of concept implementation of the paper accepted at PETS 2023 Issue 1 that is titled: 
+"Dolphin: A Cellular Voice Based Internet Shutdown Resistance System"
+
 All of the dolphin experiments were performed on platform with given details:
 
 Ofono version : 1.31 (ofonod --version)  
