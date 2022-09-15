@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<h1 id="twilio-server-implementaion-for-dolphin">Twilio Server implementaion for Dolphin</h1>
+<h2 id="preqrequisite">Preqrequisite</h2>
+<pre><code>- Create a [twilio](https://www.twilio.com/try-twilio) account or use a previous account.
+- Get a phone number on twilio.
+- Get a server with registered domain and TLS certificate
+- If previous step is not possible, you can test the scripts with [ngrok](https://ngrok.com/)</code></pre>
+<h2 id="depenedencies">Depenedencies</h2>
+<pre><code>- PortAudio is a requirement for building PyAudio.
+- You can locally [build](http://www.portaudio.com/docs/v19-doxydocs/compile_linux.html) portaudio or for debian based distros use
+
+    sudo apt install -y libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 minimodem
+
+- Install all other requirements using
+
+    pip install -r requirements.txt</code></pre>
+<h2 id="running">Running</h2>
+<pre><code>- Tested with ngrok: Set a webhook using the generated ngrok url on the twilio website.
+- Get `account_sid` and `account_token` from the twilio console.
+- Change to app folder and run `uvicorn main:app --host 0.0.0.0 --reload`. This will start the twilio server.</code></pre>
+<h2 id="testing">Testing</h2>
+<p>For both these tests, it is assumed that the previous steps are working properly. - For feasibility testing run <code>app/tools/dolphin_test.py</code>. In the file <code>app/tools/make_call.py</code> on line 11 make the required changes. - For dolphin testing run <code>Main_Experiment/ack_optimized_server.py</code></p>
+</body>
+</html>
