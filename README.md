@@ -6,21 +6,21 @@ ________________________________________________________________________________
 
 All of the dolphin experiments were performed on platform with given details:
 
-Ofono version : 1.31 (ofonod --version)  
-BlueZ version : 5.53-0ubuntu3 (dpkg --status bluez | grep '^Version:')  
-PulseAudio version : pulseaudio 13.99.1 (pulseaudio --version)  
-Alsa version : Advanced Linux Sound Architecture Driver Version k5.4.0-40-generic (cat /proc/asound/version)  
+Ofono version : 1.31 (`ofonod --version`)  
+BlueZ version : 5.53-0ubuntu3 (`dpkg --status bluez | grep '^Version:'`)  
+PulseAudio version : pulseaudio 13.99.1 (`pulseaudio --version`)  
+Alsa version : Advanced Linux Sound Architecture Driver Version k5.4.0-40-generic (`cat /proc/asound/version`)  
 
 Bluetooth enabled Ubuntu 20.04 LTS  
-Sound card : HDA-Intel - HDA Intel PCH (cat /proc/asound/cards)  
-Kernel version : 5.4.0-40-generic (uname -r)  
+Sound card : HDA-Intel - HDA Intel PCH (`cat /proc/asound/cards`)  
+Kernel version : 5.4.0-40-generic (`uname -r`)  
 
 Dolphin uses the ofono telephony framework for Linux which can be installed using : `apt-get install ofono`
 
 After installing ofono, navigate to file "/etc/pulse/default.pa". In this file, find the line "load-module module-bluetooth-discover".  
 Change it to "load-module module-bluetooth-discover headset=ofono".  
 
-If user "pulse" is not a member of group "bluetooth", then add it: "useradd -g bluetooth pulse".
+If user "pulse" is not a member of group "bluetooth", then add it: `useradd -g bluetooth pulse`.
 
 For the sake of simplicity, let's define some keywords.  
 1. Server or client "side" - Here, side will refer to the pair of bluetooth enabled smartphone and bluetooth enabled linux machine.
